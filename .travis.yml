@@ -6,5 +6,6 @@ script:
   - brew update
   - brew unlink python@2 # Stop homebrew complaining about python
   - brew tap gerbera/homebrew-gerbera
+  - mv $TRAVIS_BUILD_DIR `brew --repo`/Library/Taps/gerbera/homebrew-gerbera
   - brew install gerbera
   - brew test gerbera
